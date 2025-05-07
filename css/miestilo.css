@@ -9,6 +9,10 @@
   font-family:"roboto" ;
   src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
 }
+@font-face {
+  font-family:"staatliches" ;
+  src: url("../fonts/Staatliches-Regular.ttf");
+}
 
 
 /* versión móvil (mobile first) */
@@ -36,7 +40,7 @@ header{
     background-color: rgba(59, 59, 59, 0.53);
     color: white;
     padding: 2rem 4rem;
-    font-family: roboto;
+    font-family: "roboto";
     font-size: clamp(0.9rem, 3vw, 3rem);
     line-height: clamp(1.1rem, 3.2vw, 3.3rem);
     font-weight: 300;
@@ -64,7 +68,7 @@ header{
 h1{
   color: rgb(255, 255, 255);
   font-size: clamp(2rem,10vw,15rem);
-  font-family: roboto;
+  font-family: "staatliches";
   font-weight: 100;
   letter-spacing: 15px;
 }
