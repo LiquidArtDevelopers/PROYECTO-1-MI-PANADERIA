@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Zona de instalación de las fuentes */
 @font-face {
   font-family:"roboto" ;
   src: url("../fonts/Roboto-VariableFont_wdth\,wght.ttf");
@@ -14,64 +15,103 @@
   src: url("../fonts/Staatliches-Regular.ttf");
 }
 
-
-/* versión móvil (mobile first) */
-header{
-  /* estilos de sí mismo */
-  width: 100%;
-  height: 100vh;
-  
-  background-image: url('https://dummyimage.com/600x1200');
-  background-position: center;
-  background-size: cover;
-
-  /* cómo organiza los hijos */
-  display: flex;
-  flex-direction: column;
-  /* cuando es column */
-  /* organiza el X */
-  align-items: center;
-  /* organiza el Y */
-  justify-content: center;
-
-  row-gap: 3rem;
-
-  p{
-    background-color: rgba(59, 59, 59, 0.53);
-    color: white;
-    padding: 2rem 4rem;
-    font-family: "roboto";
-    font-size: clamp(0.9rem, 3vw, 3rem);
-    line-height: clamp(1.1rem, 3.2vw, 3.3rem);
-    font-weight: 300;
-  }
+/* Zona para estilos comunes */
+p, a, span, li{
+    font-family: 'roboto';
+    font-size: clamp(0.9rem,3vw,1.1rem);
+    color: rgb(30, 30, 30);
 }
-
-.boton{
-  background-color: blue;
-  padding: 0.5rem 2rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-  &:hover{
-    background-color: white;
-    color: blue;    
-  }
-  &:active{
-    transform: scale(.95);
-  }
-}
-
-
-/* 2rem de tamaño */
 h1{
   color: rgb(255, 255, 255);
-  font-size: clamp(2rem,10vw,15rem);
+  font-size: clamp(1.2rem,7vw,15rem);
   font-family: "staatliches";
   font-weight: 100;
   letter-spacing: 15px;
+  text-align: center;
 }
+h2{
+    font-family: 'staatliches';
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: rgb(129, 129, 211)
+}
+.boton{
+    background-color: rgb(129, 129, 211);
+    padding: 0.5rem 2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    &:hover{
+        background-color: white;
+        color: rgb(129, 129, 211);    
+    }
+    &:active{
+        transform: scale(.95);
+    }
+}
+
+/* Estilos particulares de zonas */
+header{
+    /* estilos de sí mismo */
+    width: 100%;
+    min-height: 100vh;    
+    background-image: url('https://dummyimage.com/600x1200');
+    background-position: center;
+    background-size: cover;
+
+    /* cómo organiza los hijos */
+    display: flex;
+    flex-direction: column;
+    /* cuando es column */
+    /* organiza el X */
+    align-items: center;
+    /* organiza el Y */
+    justify-content: center;
+    row-gap: 1rem;
+
+    /* media query mobile first */
+    /* tablet */
+    @media only screen and (min-width:900px){
+        &{
+            background-image: url('https://dummyimage.com/1500x1200');
+            row-gap: 3rem;
+        }
+    }
+    /* desktop */
+    @media only screen and (min-width:1400px){
+        &{
+            background-image: url('https://dummyimage.com/2560x1500');
+            row-gap: 5rem;
+        }
+    }
+
+    p{
+        width: 100%;
+        background-color: rgba(59, 59, 59, 0.53);
+        color: white;
+        padding: 2rem 1.5rem;
+        font-family: "roboto";
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-weight: 300;
+        /* tablet */
+        @media only screen and (min-width:900px){
+            &{
+                padding: 3rem 5rem;
+            }
+        }
+        /* desktop */
+        @media only screen and (min-width:1400px){
+            &{
+                padding: 4rem 20rem;
+            }
+        }
+    }
+}
+
+
+
+
+
 
 
 
