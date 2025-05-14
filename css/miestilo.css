@@ -71,9 +71,7 @@ header, main, footer{
     width: 100%;
     max-width: 2560px;
 }
-.padBotton{
-    
-}
+
 
 /* Estilos particulares de cada zona */
 header{
@@ -178,7 +176,7 @@ section{
 }
 
 /* el elemento html que tiene la clase art01 */
-article{
+.art01{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -207,7 +205,6 @@ article{
                 padding: 1.5rem;
                 width: 50%;
                 row-gap: 1rem;
-                background-color: bisque;
             }
         }
         @media only screen and (min-width:1400px){
